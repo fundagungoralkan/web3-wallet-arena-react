@@ -1,0 +1,152 @@
+/* Genel Kart Temeli */
+.CryptoCard {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 20px;
+  padding: 1.25rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.6s ease,
+    border-color 0.4s;
+}
+
+/* 🏢 1. STANDART MİKRO KARTLAR (Daha düz ve düzenli dururlar) */
+.CryptoCard--mini {
+  max-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.CryptoCard--mini:hover {
+  transform: translateY(-4px) translateZ(10px) rotateX(3deg) rotateY(-3deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* 🔮 2. PREMIUM ORACLE & RIPPLE KARTLARI (Dışarı Fırlayan Katman) */
+.CryptoCard--oracle {
+  max-width: 220px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(67, 56, 202, 0.15); /* Hafif indigo border */
+  /* Doğrudan 3D katmanda yukarıda başlasın */
+  transform: translateZ(25px);
+  box-shadow:
+    0 15px 35px rgba(67, 56, 202, 0.05),
+    0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.CryptoCard--oracle:hover {
+  /* Fare üzerine geldiğinde muazzam bir eğilme ve yükselme etkisi */
+  transform: translateY(-10px) translateZ(55px) rotateX(8deg) rotateY(-8deg);
+  border-color: #6366f1;
+  box-shadow:
+    -15px 25px 40px rgba(67, 56, 202, 0.12),
+    0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Kart İçeriği Detayları */
+.CryptoCard-id {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #6366f1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  background: #eeeffc;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.CryptoCard--oracle .CryptoCard-id {
+  background: #4338ca;
+  color: #ffffff;
+}
+
+.CryptoCard-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Resim Alanı */
+.CryptoCard-image-container {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  transform: translateZ(30px); /* Resmi kartın gövdesinden ayırır */
+}
+
+.CryptoCard-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+  transition: transform 0.4s ease;
+}
+
+.CryptoCard:hover .CryptoCard-image {
+  transform: scale(1.15) translateZ(15px);
+}
+
+/* Parıltı Efekti (Sadece Oracle/Ripple için) */
+.CryptoCard-glow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.15) 0%,
+    transparent 70%
+  );
+  top: -10%;
+  left: -10%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Alt Veri Alanı */
+.CryptoCard-data {
+  font-size: 0.7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  transform: translateZ(15px);
+}
+
+.CryptoCard-data-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CryptoCard-data-item span {
+  font-size: 0.55rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+  font-weight: 700;
+}
+
+.CryptoCard-data-item strong {
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.CryptoCard-data-item:last-child {
+  align-items: flex-end;
+}
