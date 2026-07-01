@@ -70,4 +70,4 @@ http://localhost:3000
 
 # 📷 Screenshot
 
-![Web3 Wallet Simulation Arena](wallet-arena.gif)
+![Web3 Wallet Simulation Arena](crypto.gif)
