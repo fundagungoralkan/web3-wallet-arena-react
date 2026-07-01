@@ -1,71 +1,73 @@
-# Getting Started with Create React App
+# 💰 Web3 Wallet Simulation Arena
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **Web3 Wallet Simulation Arena** built with **React**. It simulates a battle between two randomly generated cryptocurrency portfolios, comparing their total portfolio values to determine the winning wallet.
 
-## Available Scripts
+# ✨ Features
 
-In the project directory, you can run:
+**Random Wallet Generation:** Cryptocurrencies are randomly distributed into two wallets on every refresh
 
-### `npm start`
+**Portfolio Comparison:** Calculates and compares the total value of each wallet
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Winner Detection:** Highlights the wallet with the higher portfolio value
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Dynamic Crypto Cards:** Displays cryptocurrency information with icons, asset IDs, and portfolio values
 
-### `npm test`
+**Responsive Design:** Clean and responsive layout for different screen sizes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Fallback Images:** Automatically loads a default Bitcoin icon if a cryptocurrency icon is unavailable
 
-### `npm run build`
+# 📚 Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- JavaScript (ES6+)
+- CSS3
+- Cryptocurrency Icons API
+- JSX
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 🚀 Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project locally, follow the steps below:
 
-### `npm run eject`
+**Clone the repository:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/your-username/web3-wallet-simulation-arena.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Navigate to the project folder:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd web3-wallet-simulation-arena
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Install dependencies:**
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Start the development server:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+The application will run at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+# 🎮 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- A predefined list of cryptocurrencies is loaded.
+- The assets are randomly divided into two wallets:
+  - **Wallet Alpha**
+  - **Wallet Omega**
+- The total portfolio value of each wallet is calculated.
+- The wallet with the higher total value is declared the winner.
+- Every page refresh generates a new wallet distribution.
 
-### Making a Progressive Web App
+# 📷 Screenshot
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# web3-wallet-arena-react
+![Web3 Wallet Simulation Arena](wallet-arena.gif)
